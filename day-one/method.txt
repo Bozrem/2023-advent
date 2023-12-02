@@ -1,0 +1,41 @@
+Language of the Day: Ruby
+
+
+Part 1 Problem:
+Calibration data has been scrambled, we need to get the numbers out of each line. 
+The data is a 2 digit number
+The first digit is the first integer in the scrambled text
+The second digit is the last integer in the scrambled text
+
+
+Part 1 Initial Solution:
+Go line by line in a loop until end of document
+Either use an existing isInteger function or do a "1234567890".contains to get the number.
+Have digitOne and digitTwo variables
+digitOne is the first integer found
+every integer found is set to digitTwo, so the end is the last one
+add to total (digitOne*10)+digitTwo
+print total
+
+
+Revised Part 1 Solution after learning:
+Have a method of pulling the first and last digits out of a string using .match? to the digit regex (/\d/)
+Other than that it's mostly the same
+Learned that methods on objects can loop, so I can do string.for_each and it will insert characters into a following block instead of for loops
+
+
+Part 1 Answer: 54304
+
+
+
+Part 2 Problem:
+Turns out, we also need the written digits to count into our total, so we need to convert those to include them
+
+Part 2 Initial Solution:
+Lets keep the function we have, and just add another interpreting function between it.
+This function needs to:
+    Find first instance of one of the digits in print
+    Replace it with its digit
+    repeat until no instances are found
+    return formatted line
+
