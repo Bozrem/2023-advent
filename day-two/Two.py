@@ -14,6 +14,9 @@ class Set:
     def __str__(self) -> str:
         return (f"{self.reds} reds, {self.greens} greens, {self.blues} blues")
     
+    def getPower(self) -> int:
+        return self.reds * self.greens * self.blues
+
 class Game:
     sets: list[Set]
     id: int
@@ -31,7 +34,17 @@ class Game:
                 return False # Not possible: it has one greater than max
         return True # Possible
     
-    def 
+    def getMinimumPossibleSet(self) -> Set:
+        maxReds = 0
+        maxGreens = 0
+        maxBlues = 0
+
+        for set in self.sets:
+            maxReds = max(maxReds, set.reds)
+            maxGreens = max(maxGreens, set.greens)
+            maxBlues = max(maxBlues, set.blues)
+
+        return Set(maxReds, maxGreens, maxBlues)
     
     def __str__(self) -> str:
         string: str = f"Game {self.id}: "
@@ -63,6 +76,7 @@ def extractGameFromLine(line: str) -> Game:
     
     return gameFromLine
 
+# Part 1
 maxSet = Set(12, 13, 14)
 extractedGames : list[Game] = [] 
 total: int = 0
@@ -77,4 +91,10 @@ for game in extractedGames:
 
 print(f"Sum of possible games IDs = {total}")
 
+# Part 2
+totalPower: int = 0
+for game in extractedGames:
+    totalPower += game.getMinimumPossibleSet().getPower()
+
+print(f"Total power from all games: {totalPower}")
     
