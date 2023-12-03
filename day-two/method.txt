@@ -1,0 +1,54 @@
+Langauge of the day: Python
+
+
+Part 1 Problem:
+Need to find which games are impossible, given a criteria for a maximum amount of each color that can be in a bag
+Games are given in sets with the following format
+Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
+Game ID: Set 1; Set 2; Set 3
+Need to find which games are possible with the criteria of a max of 12 reds, 13 greens, and 14 blues, and sum their game IDs
+
+
+Initial Part 1 Solution:
+Have a game class and a set class
+Set class: 
+    Hold a red, green, blue
+    can return any of those three
+game class:
+    holds 3 set classes
+    has a function to return the maximum of each color
+    holds an ID
+    has boolean function to determine possibility given a max of reds, blues, and greens (set object)
+Read file line by line, parse the sets into Set objects and put those into a Game object with its ID
+Add each game object to a list
+Add each game in the list to a total if it is possible
+
+
+Revised Part 1 Solution After Learning:
+Classes are similar to Initial
+Changes:
+    Game class has a set list, add them as you get them
+    Comparison to criteria is a method in Set class
+Read line by line from the file
+Use a lot of string manipulation and string.split(; , :) to break up the lines
+Used a regex to dig the digit out of the individual color drawings once it's broken up enough
+
+
+Part 1 Answer: 2256
+
+
+
+Part 2 Problem:
+Very similar, now instead of checking possibility we check for the minimum values a game can be.
+Answer is the sum of all the products of the games minimum color values
+
+
+Initial Part 2 Solution:
+Make a function in Game class to create a set of the maximums of each color from its other sets
+Make a function in Set class to calculate power, the product of its colors
+Get all the games powers and add them
+
+
+
+
+
