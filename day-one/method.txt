@@ -39,3 +39,9 @@ This function needs to:
     repeat until no instances are found
     return formatted line
 
+
+Revised Part 2 Solution after learning:
+FAIL, couldn't get it to work with when it overlaps "oneight" -> "18"
+
+
+Part 2 Answer: FAIL
