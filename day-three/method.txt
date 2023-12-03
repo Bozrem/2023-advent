@@ -1,0 +1,23 @@
+Language of the Day: C++
+
+
+Part 1 Problem:
+There is a missing part in an engine
+We have the schematics, and each part that is adjacent to a symbol counts as a part
+if we add all the part numbers, we should be able to figure out what the missing part is
+Add all "parts" defined by numbers adjacent to a symbol
+
+
+Initial Part 1 Solution:
+Part class:
+    bool isValid
+    int numbers
+    Coordinates of it's edges
+    Function checkValidity(input[][]){
+        Checks all characters around the numbers Coordinates for a symbol, true if one found, false otherwise
+    }
+Parse the input into a massive double string array (String[][])
+in each line, go character by character to find digits
+When a digit is found, make a new Part, and move along the double string array to get its corner Coordinates
+Add all parts to a parts list
+For each part, add its numbers to a sum if checkValidity()
