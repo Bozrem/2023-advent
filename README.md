@@ -1,6 +1,7 @@
 # 2023 Advent of Code
 ### Overview
-This year, to get myself to explore more languages, I will do each day in a random language from the following list:
+Each year since 2015, [Eric Wastl](http://was.tl/) puts on the [Advent of Code](https://adventofcode.com/2023/about): an advent calendar of programming challenges for both casual and competitive programmers.
+This year, to get myself to explore more languages, I will complete each day in a random language from the following list:
 * Rust
 * Go
 * C#
