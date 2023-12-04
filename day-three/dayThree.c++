@@ -5,6 +5,8 @@ class Part{
         bool isValid;
         int numbers;
     
+    public:
+    
 
 };
 
