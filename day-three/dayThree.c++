@@ -5,10 +5,8 @@ class Part{
         bool isValid;
         int numbers;
     
-    public:
-        
 
-}
+};
 
 
 int main() {
