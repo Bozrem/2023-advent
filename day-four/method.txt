@@ -1,0 +1,29 @@
+Language of the Day: Python
+
+Part 1 Problem:
+We have a few scratchoff tickets, with winning numbers and our numbers
+The points given in each scratchoff is (number won)^2
+
+Part 1 Initial Solution:
+Go line by line
+Regex to get a list of winning numbers, and a list of our numbers
+if winning.contains(ours[i]) won++
+total += (won)^2
+
+Part 1 Revised Solution:
+Go line by line
+Regex to get a list of winning numbers, and a list of our numbers
+Make our numbers a set for more efficient searching
+Count wins
+total += truncated(2 ^ (won - 1))
+
+Part 2 Problem:
+The amount of wins from a ticket just wins you more of the tickets after. So winning 3 on ticket 5 gives me a copy of tickets 6, 7, and 8
+How many scratchoffs do we get?
+
+Part 2 Initial Solution:
+Make a 'multiplier' set
+After getting wins for a ticket:
+    Add 1 + multiplier(its number) to ticketCounter
+    For(thisTicket to thisTicket+n):
+        Multiplier of that one += multiplier(thisTicket) + 1
